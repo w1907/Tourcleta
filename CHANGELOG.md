@@ -35,3 +35,20 @@
 
 - Se realizaron cambios menores a la aplicación "authenticate".
 - Se realizaron cambios menores a la aplicación "core".
+
+# Version 0.1.2.2 - 16/11/2018
+
+**Agregado**
+
+- Se agregó la vista de registro.
+- Se agregó la plantilla de registro.
+- Se agregó la plantilla de index_usuario.
+- Se agregó la plantilla de index_empleado.
+- Se agregó la plantilla de index_admin.
+
+**Modificado**
+
+- Se modificó el modelo "Profile" de la aplicación "authenticate".
+- Se modificó urls.py de la aplicación "authenticate".
+- Se modificó admin.py de la aplicación "authenticate".
+- Se modificó la plantilla login de la aplicación "authenticate".

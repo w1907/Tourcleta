@@ -17,7 +17,10 @@ def signin(request):
 		if user is not None:
 			if user.is_active:
 				login(request, user)
-				return HttpResponseRedirect(reverse('core.index'))
+				if user.profile.is_empleado:
+					return HttpResponse("Soy Empleado")
+				else:
+					return HttpResponse("Soy Usuario normal")
 			else:
 				messages.warning(request, "Correo o contraseña invalidos")
 		else:
@@ -35,12 +38,12 @@ def register(request):
 		if form.is_valid():
 			user = form.save()
 			user.refresh_from_db()
-			user.telefono = form.cleaned_data.get('telefono')
+			user.profile.telefono = form.cleaned_data.get('telefono')
 			user.save()
 			raw_password = form.cleaned_data.get('password1')
 			user = authenticate(username=user.username, password=raw_password)
 			login(request, user)
-			return HttpResponseRedirect(reverse('index'))
+			return HttpResponseRedirect(reverse('core.index'))
 	else:
 		form = SignUpForm()
-	return render(request, template_name, {'form': form})
+	return render(request, template, {'form': form})

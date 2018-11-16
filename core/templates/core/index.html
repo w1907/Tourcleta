@@ -63,8 +63,13 @@
                 <div class="text-wrapper">
                   <p class="profile-name">Richard V.Welsh</p>
                   <div>
-                    <small class="designation text-muted">Manager</small>
+                    {% if user.profile.is_empleado == False %}
+                    <small class="designation text-muted">Usuario normal</small>
                     <span class="status-indicator online"></span>
+                    {% else %}
+                    <small class="designation text-muted">Empleado</small>
+                    <span class="status-indicator online"></span>
+                    {% endif%}
                   </div>
                 </div>
               </div>
