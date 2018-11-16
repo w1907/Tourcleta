@@ -24,14 +24,14 @@
 - Se agregó la vista de login.
 - Se agregó la plantilla de login.
 
-**Modifcado**
+**Modificado**
 
 - Se modificó settings.py de la carpeta principal "django_tourcleta".
 - Se modificó urls.py de la carpeta principal "django_tourcleta".
 
 # Version 0.1.2.1 - 16/11/2018
 
-**Modifcado**
+**Modificado**
 
 - Se realizaron cambios menores a la aplicación "authenticate".
 - Se realizaron cambios menores a la aplicación "core".
@@ -52,3 +52,10 @@
 - Se modificó urls.py de la aplicación "authenticate".
 - Se modificó admin.py de la aplicación "authenticate".
 - Se modificó la plantilla login de la aplicación "authenticate".
+
+# Version 0.1.2.3 - 16/11/2018
+
+**Modificado**
+
+- Se realizaron cambios menores a la aplicación "authenticate".
+- Se realizaron cambios menores a la aplicación "core".

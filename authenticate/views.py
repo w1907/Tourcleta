@@ -18,9 +18,9 @@ def signin(request):
 			if user.is_active:
 				login(request, user)
 				if user.profile.is_empleado:
-					return HttpResponse("Soy Empleado")
+					return HttpResponseRedirect(reverse('core.index_empleado'))
 				else:
-					return HttpResponse("Soy Usuario normal")
+					return HttpResponseRedirect(reverse('core.index_usuario'))
 			else:
 				messages.warning(request, "Correo o contraseña invalidos")
 		else:
