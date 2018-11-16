@@ -28,3 +28,10 @@
 
 - Se modificó settings.py de la carpeta principal "django_tourcleta".
 - Se modificó urls.py de la carpeta principal "django_tourcleta".
+
+# Version 0.1.2.1 - 16/11/2018
+
+**Modifcado**
+
+- Se realizaron cambios menores a la aplicación "authenticate".
+- Se realizaron cambios menores a la aplicación "core".

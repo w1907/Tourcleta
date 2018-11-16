@@ -36,7 +36,7 @@
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown d-none d-xl-inline-block">
             <span class="profile-text">Bienvenido, {{ user.username }} !</span>
-            <a class="nav-item nav-profile" href="##" style="text-decoration: none; color: white;">
+            <a class="nav-item nav-profile" href="{% url 'authenticate.signout' %}" style="text-decoration: none; color: white;">
               Cerrar Sesión
             </a>
             </div>
