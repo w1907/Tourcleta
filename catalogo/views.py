@@ -8,7 +8,6 @@ def catalogo(request, tipo_catalogo):
 	data['catalogo'] = tipo_catalogo
 	if tipo_catalogo == "bicicleta":
 		bicicletas = bicicleta.objects.all()
-		print(bicicletas)
 		data['objetos'] = bicicletas
 	elif tipo_catalogo == "equipamiento":
 		equipamientos = equipamiento.objects.all()

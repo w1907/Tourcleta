@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls'), name="core"),
     path('auth/', include('authenticate.urls'), name="authenticate"),
-    path('catalog/', include('catalogo.urls'), name="catalogo")
+    path('catalog/', include('catalogo.urls'), name="catalogo"),
+    path('reservation/', include('reserva.urls'), name="reserva")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
