@@ -85,3 +85,17 @@
 **Modificado**
 
 - Se realizaron cambios menores a la aplicacion catalogo.
+
+# Version 0.1.3.2 - 17/11/2018
+
+**Agregado**
+
+- Se agregó la aplicación "reserva".
+
+**Modificado**
+
+- Se realizaron cambios menores a la aplicación catalogo.
+
+**Eliminado**
+
+- Se eliminaron las imagenes de la carpeta "media".
