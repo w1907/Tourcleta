@@ -1,11 +1,40 @@
 {% extends "core/index.html" %}
 {% block content %}
+<div class="row">
 {% if catalogo == "bicicleta" %}
-{% for obj in objetos %}
-<h3>{{obj.marca}}</h3>
-{% endfor %}
-<h1>Hola</h1>
+    {% for i in objetos %}
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="{{i.imagen_bicicleta.url}}" alt=":D" ></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">{{i.marca}}</a>
+                </h4>
+                <p class="card-text">{{i.aro}}</p>
+                <p class="card-text">{{i.precio}}</p>
+              </div>
+              <a class="btn btn-primary btn-fw" href="bicicleta/ver_mas_bicicleta/{{i.pk}}">
+                  <i class="fa fa-plus"></i>Ver mas</a>
+            </div>
+          </div>
+    {% endfor %}
 {% else %}
-<h2>Adios</h2>
+    {% for i in objetos %}
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">{{i.nombre}}</a>
+                </h4>
+                <p class="card-text">{{i.precio}}</p>
+              </div>
+              <a class="btn btn-primary btn-fw" href="equipamiento/ver_mas_equipamiento/{{i.pk}}">
+                  <i class="fa fa-plus"></i>Ver mas</a>
+            </div>
+          </div>
+    {% endfor %}
 {% endif %}
+ </div>
 {% endblock %}
+

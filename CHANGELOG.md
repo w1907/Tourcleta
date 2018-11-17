@@ -73,3 +73,15 @@
 - Se modificó urls.py de la carpeta principal "django_tourcleta".
 - Se modificó settings.py de la carpeta principal "django_tourcleta".
 - Se realizaron cambios menores a la aplicación "authenticate".
+
+# Version 0.1.3.1 - 17/11/2018
+
+**Agregado**
+
+- Se agregó los atributos imagen en los modelos de catalogo.
+- Se agregó la plantilla ver_mas.html
+- Se agregó la vista ver_mas.
+
+**Modificado**
+
+- Se realizaron cambios menores a la aplicacion catalogo.
