@@ -1,41 +1,11 @@
 {% extends "core/index.html" %}
 {% block content %}
-	{% if catalogo == bicicleta %}
-	<h1 class="my-4">Catalogo
-		<small>Bicicletas</small>
-	</h1>
-	{% for objeto in obejtos %}
-	<div class="col-lg-4 col-sm-6 portfolio-item">
-		<div class="card h-100">
-			<a href="#"><img class="card-img-top" src="{{i.imagen_bicicleta.url}}" alt=""></a>
-			<div class="card-body">
-				<h4 class="card-title">
-					<a href="#">{{objeto.marca}}</a>
-                </h4>
-                <p class="card-text">{{objeto.descripcion_bicicleta}}</p>
-            </div>
-            <a class="btn btn-primary btn-fw" href="{% url 'ver_mas_bicicletas' i.pk %}">
-            	<i class="fa fa-plus"></i>Ver mas
-            </a>
-        </div>
-    </div>
-    {% endfor %}
-    {% elif catalogo == equipamiento %}
-    {% for objeto in objetos %}
-	<div class="col-lg-4 col-sm-6 portfolio-item">
-		<div class="card h-100">
-			<a href="#"><img class="card-img-top" src="{{i.imagen_bicicleta.url}}" alt=""></a>
-			<div class="card-body">
-				<h4 class="card-title">
-					<a href="#">{{objeto.marca}}</a>
-                </h4>
-                <p class="card-text">{{objeto.descripcion_bicicleta}}</p>
-            </div>
-            <a class="btn btn-primary btn-fw" href="{% url 'ver_mas_bicicletas' i.pk %}">
-            	<i class="fa fa-plus"></i>Ver mas
-            </a>
-        </div>
-    </div>
-    {% endfor %}
-    {% endif %}
+{% if catalogo == "bicicleta" %}
+{% for obj in objetos %}
+<h3>{{obj.marca}}</h3>
+{% endfor %}
+<h1>Hola</h1>
+{% else %}
+<h2>Adios</h2>
+{% endif %}
 {% endblock %}
