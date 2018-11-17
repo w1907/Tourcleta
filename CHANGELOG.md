@@ -59,3 +59,17 @@
 
 - Se realizaron cambios menores a la aplicación "authenticate".
 - Se realizaron cambios menores a la aplicación "core".
+
+# Version 0.1.3 - 16/11/2018
+
+**Agregado**
+
+- Se agregó la aplicación "catalogo".
+- Se agregó la plantilla de catalogo
+- Se agregó modelos bicicletas y equipamiento.
+
+**Modificado**
+
+- Se modificó urls.py de la carpeta principal "django_tourcleta".
+- Se modificó settings.py de la carpeta principal "django_tourcleta".
+- Se realizaron cambios menores a la aplicación "authenticate".

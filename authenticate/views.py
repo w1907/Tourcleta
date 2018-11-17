@@ -17,10 +17,7 @@ def signin(request):
 		if user is not None:
 			if user.is_active:
 				login(request, user)
-				if user.profile.is_empleado:
-					return HttpResponseRedirect(reverse('core.index_empleado'))
-				else:
-					return HttpResponseRedirect(reverse('core.index_usuario'))
+				return HttpResponseRedirect(reverse('core.index'))
 			else:
 				messages.warning(request, "Correo o contraseña invalidos")
 		else:
