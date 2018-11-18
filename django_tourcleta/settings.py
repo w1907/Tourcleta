@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'core',
     'authenticate',
     'catalogo',
+    'arriendo',
+    'mantenedor',
 ]
 
 MIDDLEWARE = [

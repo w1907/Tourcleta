@@ -3,7 +3,8 @@
 {% if ver_mas == "bicicleta" %}
 <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="" alt=""></a>
+          <a href="#">
+          <img class="card-img-top" src="{{objetos.imagen_bicicleta.url}}" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">{{objetos.marca}}</a>
@@ -16,7 +17,7 @@
 {% else %}
 <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="" alt=""></a>
+          <a href="#"><img class="card-img-top" src="{{objetos.imagen_equipamiento.url}}" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">{{objetos.nombre}}</a>

@@ -1,10 +1,12 @@
 from django.contrib import admin
-from catalogo.models import bicicleta, equipamiento
+from catalogo.models import Bicicleta, Equipamiento
+"""
+@admin.register(Bicicleta)
+class BicicletaAdmin(admin.ModelAdmin):
+	list_display = ('marca', 'aro', 'precio','imagen_bicicleta',)
+"""
+admin.site.register(Bicicleta)
 
-@admin.register(bicicleta)
-class bicicletaAdmin(admin.ModelAdmin):
-	list_display = ('marca', 'aro', 'precio',)
-
-@admin.register(equipamiento)
-class bicicletaAdmin(admin.ModelAdmin):
+@admin.register(Equipamiento)
+class BicicletaAdmin(admin.ModelAdmin):
 	list_display = ('nombre', 'precio',)

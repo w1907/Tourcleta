@@ -1,0 +1,18 @@
+{% extends "core/index.html" %}
+
+{% block content %}
+
+<h2><a href="{% url 'catalogo:bicicleta_list' %}">Bicicletas </a></h2>
+
+<ul>
+    {% for i in object_list %}
+    <li>{{ i.marca }}  {{ i.aro }} {{ i.precio }} {{ i.imagen_bicicleta }} 
+    <a href="{% url 'catalogo:bicicleta_edit' i.id %}">Editar</a>
+    <a href="{% url 'catalogo:bicicleta_delete' i.id %}">Eliminar</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'catalogo:bicicleta_new' %}">New</a>
+
+{% endblock %}

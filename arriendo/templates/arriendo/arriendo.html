@@ -1,0 +1,22 @@
+{% extends "core/index.html" %}
+{% block content %}
+<form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Participantes</label>
+            <div class="input-group">
+                {{form.participantes}}
+            </div>
+            {{form.participantes.errors}}
+        </div>
+        <div class="form-group">
+            <label>Duracion</label>
+            <div class="input-group">
+                {{form.duracion}}
+            </div>
+            {{form.duracion.errors}}
+        </div>
+        <button type="submit" class="btn btn-primary btn-block py-2">Ingresar Arriendo</button>
+
+    </form> 
+{% endblock %}

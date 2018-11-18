@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls'), name="core"),
     path('auth/', include('authenticate.urls'), name="authenticate"),
-    path('catalog/', include('catalogo.urls'), name="catalogo")
+    path('catalog/', include('catalogo.urls'), name="catalogo"),
+    path('arriendo/', include('arriendo.urls'), name="arriendo"),
+    path('mantenedor/', include('mantenedor.urls'), name="mantenedor"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
