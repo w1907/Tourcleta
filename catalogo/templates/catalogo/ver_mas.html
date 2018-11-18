@@ -4,7 +4,11 @@
 <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
           <a href="#">
-          <img class="card-img-top" src="{{objetos.imagen_bicicleta.url}}" alt=""></a>
+          {% if objetos.imagen_bicicleta %}
+          <img class="card-img-top" src="{{objetos.imagen_bicicleta.url}}"></a>
+          {% else %}
+          <img class="card-img-top" alt="HUGO CULIA >:D">
+          {% endif %}
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">{{objetos.marca}}</a>
@@ -17,7 +21,12 @@
 {% else %}
 <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="{{objetos.imagen_equipamiento.url}}" alt=""></a>
+          <a href="#">
+          {% if objetos.imagen_equipamiento %}
+          <img class="card-img-top" src="{{objetos.imagen_equipamiento.url}}"></a>
+          {% else %}
+          <img class="card-img-top" alt="HUGO CULIA >:D">
+          {% endif %}
           <div class="card-body">
             <h4 class="card-title">
               <a href="#">{{objetos.nombre}}</a>

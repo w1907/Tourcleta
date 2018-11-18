@@ -2,17 +2,55 @@
 
 {% block content %}
 
-<h2><a href="{% url 'catalogo:bicicleta_list' %}">Bicicletas </a></h2>
-
+<h2><a href="{% url 'catalogo:bicicleta_list' %}">Bicicletas</a></h2>
+<p align = "center">
+    <a class="btn btn-outline-danger" href="{% url 'catalogo:bicicleta_new' %}">
+        <i class="fa fa-plus"></i>Agregar Bicicleta
+    </a>
+    <br>
+    <br>
+    <br>
+</p>
 <ul>
+    <div class="row">
     {% for i in object_list %}
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a href="#">
+              {% if i.imagen_bicicleta %}
+              <img class="card-img-top" src="{{i.imagen_bicicleta.url}}"></a>
+              {% else %}
+              <img class="card-img-top" alt="HUGO CULIA >:D">
+              {% endif %}
+            <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#">{{i.marca}}</a>
+                </h4>
+                <p class="card-text">Aro: {{i.aro}}</p>
+                <p class="card-text">Precio: {{i.precio}}</p>
+            </div>
+                <a class="btn btn-outline-danger" href="{% url 'catalogo:bicicleta_edit' i.id %}">
+                <i class="fa fa-plus"></i>Editar
+                </a>
+                <br>
+                <a class="btn btn-outline-danger" href="{% url 'catalogo:bicicleta_delete' i.id %}">
+                <i class="fa fa-plus"></i>Eliminar
+                </a>
+            </div>
+        </div>
+       
+
+
+
+    <!--
     <li>{{ i.marca }}  {{ i.aro }} {{ i.precio }} {{ i.imagen_bicicleta }} 
     <a href="{% url 'catalogo:bicicleta_edit' i.id %}">Editar</a>
     <a href="{% url 'catalogo:bicicleta_delete' i.id %}">Eliminar</a>
     </li>
+    -->
     {% endfor %}
 </ul>
 
-<a href="{% url 'catalogo:bicicleta_new' %}">New</a>
+<!--<a href="{% url 'catalogo:bicicleta_new' %}">Agregar Bicicleta</a>-->
 
 {% endblock %}

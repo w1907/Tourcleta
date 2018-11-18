@@ -49,4 +49,6 @@ class BicicletaDelete(DeleteView):
     success_url = reverse_lazy('catalogo:bicicleta_list')
 
 
+
+
 	

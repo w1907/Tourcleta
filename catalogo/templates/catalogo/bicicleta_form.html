@@ -2,11 +2,82 @@
 
 {% block content %}
 
-<h2><a href="{% url 'catalogo:bicicleta_list' %}">Bicicletas</a>: Editar</h2>
-
-<form method="post" enctype="multipart/form-data">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" />
-</form>
+{% if request.get_full_path == "/catalog/new/" %}
+<div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                    <h4><a href="{% url 'catalogo:bicicleta_list' %}">Agregar bicicleta</a></h4>
+                  <br>
+            <form method="post" class="forms-sample" enctype="multipart/form-data">
+                  {% csrf_token %}
+                    <div class="form-group">
+                      <label for="Marca">Marca</label>
+                      <input class="form-control" type="text" id={{form.marca}}
+                    </div>
+                    {{form.marca.errors}}
+                    <div class="form-group">
+                      <label for="Aro">Aro</label>
+                      <input type="text" class="form-control" id={{form.aro}}
+                    </div>
+                    {{form.aro.errors}}
+                    <div class="form-group">
+                      <label for="Precio">Precio</label>
+                      <input type="text" class="form-control" id={{form.precio}}
+                    </div>
+                    {{form.precio.errors}}
+                    <div class="form-group">
+                      <label>File upload</label>
+                      <input type="file" name="img[]" class="file-upload-default">
+                      <div class="input-group col-xs-12">
+                        <!--<input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">-->
+                        <span class="input-group-append">
+                            <input type="file" class="form-control file-upload-info" name="imagen_bicicleta" accept="image/*" id="id_imagen_bicicleta">
+                        </span>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-fw">
+                        <i class="mdi mdi-upload"></i>Agregar
+                    </button>
+                  </form>
+{% else %}
+<div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                    <h4><a href="{% url 'catalogo:bicicleta_list' %}">Editar bicicleta</a></h4>
+                  <br>
+            <form method="post" class="forms-sample" enctype="multipart/form-data">
+                  {% csrf_token %}
+                    <div class="form-group">
+                      <label for="Marca">Marca</label>
+                      <input class="form-control" type="text" id={{form.marca}}
+                    </div>
+                    {{form.marca.errors}}
+                    <div class="form-group">
+                      <label for="Aro">Aro</label>
+                      <input type="text" class="form-control" id={{form.aro}}
+                    </div>
+                    {{form.aro.errors}}
+                    <div class="form-group">
+                      <label for="Precio">Precio</label>
+                      <input type="text" class="form-control" id={{form.precio}}
+                    </div>
+                    {{form.precio.errors}}
+                    <div class="form-group">
+                      <label>File upload</label>
+                      <input type="file" name="img[]" class="file-upload-default">
+                      <div class="input-group col-xs-12">
+                        <!--<input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image">-->
+                        <span class="input-group-append">
+                            <input type="file" class="form-control file-upload-info" name="imagen_bicicleta" accept="image/*" id="id_imagen_bicicleta">
+                        </span>
+                      </div>
+                      {{form.imagen_bicicleta.errors}}
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-fw">
+                        <i class="mdi mdi-cloud-download"></i>Editar
+                    </button>
+                  </form>
+    {% endif %}
 
 {% endblock %}
+
