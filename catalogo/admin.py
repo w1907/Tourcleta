@@ -6,8 +6,10 @@ class BicicletaAdmin(admin.ModelAdmin):
 	list_display = ('marca', 'aro', 'precio','imagen_bicicleta',)
 """
 admin.site.register(Bicicleta)
+admin.site.register(Equipamiento)
 admin.site.register(Sede)
-
+"""
 @admin.register(Equipamiento)
 class BicicletaAdmin(admin.ModelAdmin):
 	list_display = ('nombre', 'precio',)
+"""

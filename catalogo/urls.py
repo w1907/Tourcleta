@@ -16,5 +16,4 @@ urlpatterns = [
 	path('edit_equipamiento/<int:pk>', views.EquipamientoUpdate.as_view(), name='equipamiento_edit'),
 	path('delete_equipamiento/<int:pk>', views.EquipamientoDelete.as_view(), name='equipamiento_delete'),
 
-	
 ]

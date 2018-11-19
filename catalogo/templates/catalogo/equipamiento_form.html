@@ -2,88 +2,52 @@
 
 {% block content %}
 
+<script>
+
+  window.onload = function(){
+    document.getElementById('id_sede_equipamiento').className += "form-control";
+    document.getElementById('id_nombre').className += "form-control";
+    document.getElementById('id_precio').className += "form-control";
+    document.getElementById('id_estado_equipamiento').className += "form-control";
+    document.getElementById('id_descripcion_equipamiento').className += "form-control";
+    document.getElementById('id_imagen_equipamiento').className += "form-control";
+  }
+
+</script>
 
 
 {% if request.get_full_path == "/catalog/new_equipamiento/" %}
 <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                    <h4><a href="{% url 'catalogo:equipamiento_list' %}">Agregar Equipamiento</a></h4>
+                    <h4><a href="{% url 'catalogo:bicicleta_list' %}">Agregar Equipamiento</a></h4>
                   <br>
-            <form method="post" class="forms-sample" enctype="multipart/form-data">
-                  {% csrf_token %}
-                    <div class="form-group">
-                      <label for="Nombre">Nombre</label>
-                      <input class="form-control" type="text" id={{form.nombre}}
-                    </div>
-                    {{form.nombre.errors}}
-                    <div class="form-group">
-                      <label for="Precio">Precio</label>
-                      <input type="number" class="form-control" id={{form.precio}}
-                    </div>
-                    {{form.precio.errors}}
-
-                    <div class="form-group">
-                      <label for="Descripcion">Descripcion</label>
-                      <input type="text" class="form-control" id={{form.descripcion_equipamiento}}
-                    </div>
-                    {{form.descripcion_equipamiento.errors}}
-
-                    <div class="form-group">
-                      <label>File upload</label>
-                      <input type="file" name="img[]" class="file-upload-default">
-                      <div class="input-group col-xs-12">
-                        
-                        <span class="input-group-append">
-                            <input type="file" class="form-control file-upload-info" name="imagen_equipamiento" accept="image/*" id="id_imagen_equipamiento">
-                        </span>
-                      </div>
-                      {{form.imagen_equipamiento.errors}}
-                    </div>
-                    <button type="submit" class="btn btn-danger btn-fw">
+                  <form method="post" class="forms-sample" enctype="multipart/form-data">
+                    {% csrf_token %}
+                      {{form.as_p}}
+                      <button type="submit" class="btn btn-danger btn-fw">
                         <i class="mdi mdi-upload"></i>Agregar
-                    </button>
+                      </button>
                   </form>
+                </div>
+              </div>
+            </div>
 {% else %}
 <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                    <h4><a href="{% url 'catalogo:equipamiento_list' %}">Editar Equipamiento</a></h4>
-                  <br>
+                    <h4><a href="{% url 'catalogo:bicicleta_list' %}">Editar Equipamiento</a></h4>
+
             <form method="post" class="forms-sample" enctype="multipart/form-data">
                   {% csrf_token %}
-                    <div class="form-group">
-                      <label for="Nombre">Nombre</label>
-                      <input class="form-control" type="text" id={{form.nombre}}
-                    </div>
-                    {{form.nombre.errors}}
-                    <div class="form-group">
-                      <label for="Precio">Precio</label>
-                      <input type="text" class="form-control" id={{form.precio}}
-                    </div>
-                    {{form.precio.errors}}
-
-                    <div class="form-group">
-                      <label for="Descripcion">Descripcion</label>
-                      <input type="text" class="form-control" id={{form.descripcion_equipamiento}}
-                    </div>
-                    {{form.descripcion_equipamiento.errors}}
-
-                    <div class="form-group">
-                      <label>File upload</label>
-                      <input type="file" name="img[]" class="file-upload-default">
-                      <div class="input-group col-xs-12">
-                        
-                        <span class="input-group-append">
-                            <input type="file" class="form-control file-upload-info" name="imagen_equipamiento" accept="image/*" id="id_imagen_equipamiento">
-                        </span>
-                      </div>
-                      {{form.imagen_equipamiento.errors}}
-                    </div>
+                    {{form.as_p}}
                     <button type="submit" class="btn btn-danger btn-fw">
                         <i class="mdi mdi-cloud-download"></i>Editar
                     </button>
-                  </form>
+            </form>
+                  </div>
+                </div>
+              </div>
     {% endif %}
 
 {% endblock %}

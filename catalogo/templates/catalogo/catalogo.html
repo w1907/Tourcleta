@@ -15,8 +15,10 @@
                 <h4 class="card-title">
                   <a href="#">{{i.marca}}</a>
                 </h4>
+                <p class="card-text">Sede: {{i.sede_bicicleta}}</p>
                 <p class="card-text">Aro: '{{i.aro}}'</p>
                 <p class="card-text">Precio: ${{i.precio}}</p>
+                <p class="card-text">Estado: {{i.estado_bicicleta}}</p>
               </div>
               <a class="btn btn-primary btn-fw" href="bicicleta/ver_mas_bicicleta/{{i.pk}}">
                   <i class="fa fa-plus"></i>Ver mas</a>
@@ -37,7 +39,9 @@
                 <h4 class="card-title">
                   <a href="#">{{i.nombre}}</a>
                 </h4>
+                <p class="card-text">Sede: {{i.sede_equipamiento}}</p>
                 <p class="card-text">Precio: ${{i.precio}}</p>
+                <p class="card-text">Estado: {{i.estado_equipamiento}}</p>
               </div>
               <a class="btn btn-primary btn-fw" href="equipamiento/ver_mas_equipamiento/{{i.pk}}">
                   <i class="fa fa-plus"></i>Ver mas</a>

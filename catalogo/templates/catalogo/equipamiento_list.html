@@ -26,7 +26,9 @@
                 <h4 class="card-title">
                   <a href="#">{{i.nombre}}</a>
                 </h4>
+                <p class="card-text">Sede: {{i.sede_equipamiento}}</p>
                 <p class="card-text">Precio: ${{i.precio}}</p>
+                <p class="card-text">Estado: {{i.estado_equipamiento}}</p>
                 <p class="card-text">Descripcion Equipamiento: {{i.descripcion_equipamiento}}</p>
             </div>
                 <a class="btn btn-outline-primary" href="{% url 'catalogo:equipamiento_edit' i.id %}">

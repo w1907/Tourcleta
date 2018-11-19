@@ -36,12 +36,12 @@ class BicicletaList(ListView):
 
 class BicicletaCreate(CreateView):
     model = Bicicleta
-    fields = ['marca', 'aro', 'precio','descripcion_bicicleta','imagen_bicicleta']
+    fields = ['sede_bicicleta', 'marca', 'aro', 'precio', 'estado_bicicleta','descripcion_bicicleta','imagen_bicicleta']
     success_url = reverse_lazy('catalogo:bicicleta_list')
 
 class BicicletaUpdate(UpdateView):
     model = Bicicleta
-    fields = ['marca', 'aro', 'precio', 'descripcion_bicicleta','imagen_bicicleta']
+    fields = ['sede_bicicleta', 'marca', 'aro', 'precio', 'estado_bicicleta', 'descripcion_bicicleta','imagen_bicicleta']
     success_url = reverse_lazy('catalogo:bicicleta_list')
 
 class BicicletaDelete(DeleteView):
@@ -54,12 +54,12 @@ class EquipamientoList(ListView):
 
 class EquipamientoCreate(CreateView):
 	model = Equipamiento
-	fields = ['nombre', 'precio','descripcion_equipamiento', 'imagen_equipamiento']
+	fields = ['sede_equipamiento', 'nombre', 'precio', 'estado_equipamiento','descripcion_equipamiento', 'imagen_equipamiento']
 	success_url = reverse_lazy('catalogo:equipamiento_list')
 
 class EquipamientoUpdate(UpdateView):
     model = Equipamiento
-    fields = ['nombre', 'precio','descripcion_equipamiento','imagen_equipamiento']
+    fields = ['sede_equipamiento', 'nombre', 'precio', 'estado_equipamiento','descripcion_equipamiento', 'imagen_equipamiento']
     success_url = reverse_lazy('catalogo:equipamiento_list')
 
 class EquipamientoDelete(DeleteView):
