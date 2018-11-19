@@ -9,14 +9,14 @@
               {% if i.imagen_bicicleta %}
               <img class="card-img-top" src="{{i.imagen_bicicleta.url}}"></a>
               {% else %}
-              <img class="card-img-top" alt="HUGO CULIA >:D">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Imagen_no_disponible.svg" alt="IMAGEN NO DISPONIBLE">
               {% endif %}
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">{{i.marca}}</a>
                 </h4>
-                <p class="card-text">Aro: {{i.aro}}</p>
-                <p class="card-text">Precio: {{i.precio}}</p>
+                <p class="card-text">Aro: '{{i.aro}}'</p>
+                <p class="card-text">Precio: ${{i.precio}}</p>
               </div>
               <a class="btn btn-primary btn-fw" href="bicicleta/ver_mas_bicicleta/{{i.pk}}">
                   <i class="fa fa-plus"></i>Ver mas</a>
@@ -31,13 +31,13 @@
               {% if i.imagen_equipamiento %}
               <img class="card-img-top" src="{{i.imagen_equipamiento.url}}"></a>
               {% else %}
-              <img class="card-img-top" alt="HUGO CULIA >:D">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Imagen_no_disponible.svg" alt="IMAGEN NO DISPONIBLE">
               {% endif %}
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#">{{i.nombre}}</a>
                 </h4>
-                <p class="card-text">Precio: {{i.precio}}</p>
+                <p class="card-text">Precio: ${{i.precio}}</p>
               </div>
               <a class="btn btn-primary btn-fw" href="equipamiento/ver_mas_equipamiento/{{i.pk}}">
                   <i class="fa fa-plus"></i>Ver mas</a>
